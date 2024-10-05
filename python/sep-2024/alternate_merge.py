@@ -1,23 +1,23 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        p1, p2 = 0, 0
-        list1 = list(word1)
-        list2 = list(word2)
+        i, j = 0, 0
         out = []
-        print(list1)
-        print(list2)
-        j = 0
-        for i in range(0, len(list1)):
-            out.append(list1[i])
-            out.append(list2[j])
+        # Looping through both words until end is reached
+        while i < len(word1) and j < len(word2):
+            out.append(word1[i])
+            out.append(word2[j])
+            i += 1
             j += 1
-        print(i)
-        if j > len(list1):
-            for k in range(j, k):
-                out.append(list2[j])
-                j += 1
-        if len(list1) < len(list2):
-            out.append(list2[j])
-        print(out)
+
+        # adding remaining characters of word1 or word2 if any
+        if i < len(word1):
+            out.append(word1[i:])
+        if j < len(word2):
+            out.append(word2[j:])
+
+        out_str = ''.join(out)
+        print(out_str)
+        return out_str
+
     
 Solution().mergeAlternately(word1="fir", word2="waterere")
