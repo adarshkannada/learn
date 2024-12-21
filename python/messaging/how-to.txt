@@ -1,0 +1,7 @@
+command to run
+docker run -d --hostname rmq --name rabbitserver -p 8080:15672 -p 5672:5672 rabbitmq:3-management
+
+hostname = rmq, this is the hostname
+15672 is mapped to local 8080 port. this gives access to rabbit UI
+default username - guest
+default passowrd - guest
