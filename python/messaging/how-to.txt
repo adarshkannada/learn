@@ -5,3 +5,5 @@ hostname = rmq, this is the hostname
 15672 is mapped to local 8080 port. this gives access to rabbit UI
 default username - guest
 default passowrd - guest
+
+docker container rm <id>  if the container doesn't work by earlier docker run command.
